@@ -19,6 +19,7 @@ cd nodejs-k8s
 ```
 Running locally
 ```bash
+nom install
 node ./bin/server.js
 ```
 
@@ -44,7 +45,7 @@ docker build -t silvestri/nodejs-k8s .
 ```
 
 #### Deploying to Kubernetes
-The `deployment.yaml` contains the definition of our deployment application and the NodePort service to expose our application.
+The `deployment.yaml` contains the definition of our application deployment and the NodePort service to expose our application.
 
 To create the stack, type:
 
@@ -67,3 +68,9 @@ The command above will open the url http://192.168.99.100:30001
 You can also try:
 - http://192.168.99.100:30001/hello
 - http://192.168.99.100:30001/hello/YourName
+
+#### Cleaning up
+The command bellow will remove the stack create by `deployment.yaml` file
+```bash
+kubectl delete -f deployment.yaml
+```
