@@ -19,7 +19,7 @@ cd nodejs-k8s
 ```
 Running locally
 ```bash
-nom install
+npm install
 node ./bin/server.js
 ```
 
